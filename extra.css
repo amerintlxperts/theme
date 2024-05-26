@@ -37,8 +37,8 @@
 
 /* Custom Pallete */
 [data-md-color-primary=fortinet] {
-    --md-primary-fg-color: #F0F0F0;
-    --md-primary-fg-color--light: #F0F0F0;
+    --md-primary-fg-color: #000000;
+    --md-primary-fg-color--light: #000000;
     --md-primary-fg-color--dark: #F0F0F0;
     --md-primary-bg-color: #F0F0F0;
     --md-primary-bg-color--light:#F0F0F0
