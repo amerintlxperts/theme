@@ -37,15 +37,15 @@
 
 /* Custom Pallete */
 [data-md-color-primary=fortinet] {
-    --md-primary-fg-color: #7e56c2;
-    --md-primary-fg-color--light: #9574cd;
-    --md-primary-fg-color--dark: #673ab6;
+    --md-primary-fg-color: #02a6f2;
+    --md-primary-fg-color--light: #28b5f6;
+    --md-primary-fg-color--dark: #0287cf;
     --md-primary-bg-color: #fff;
     --md-primary-bg-color--light:#ffffffb3
 }
 [data-md-color-accent=fortinet] {
-    --md-accent-fg-color: #526cfe;
-    --md-accent-fg-color--transparent: #526cfe1a;
+    --md-accent-fg-color: #0091eb;
+    --md-accent-fg-color--transparent: #0091eb1a;
     --md-accent-bg-color: #fff;
     --md-accent-bg-color--light:#ffffffb3
 }
