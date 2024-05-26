@@ -50,3 +50,7 @@
     --md-accent-bg-color: #CDCDCD;
     --md-accent-bg-color--light:#CDCDCD
 }
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 210; 
+}
