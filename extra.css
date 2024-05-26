@@ -44,8 +44,8 @@
     --md-primary-bg-color--light:#F0F0F0
 }
 [data-md-color-accent=fortinet] {
-    --md-accent-fg-color: #000000;
-    --md-accent-fg-color--transparent: #0000001a;
-    --md-accent-bg-color: #F0F0F0;
-    --md-accent-bg-color--light:#F0F0F0
+    --md-accent-fg-color: #F0F0F0;
+    --md-accent-fg-color--transparent: #F0F0F01a;
+    --md-accent-bg-color: #000000;
+    --md-accent-bg-color--light:#000000
 }
