@@ -1,0 +1,65 @@
+.md-typeset .admonition,
+.md-typeset details {
+  border-width: 0;
+  border-left-width: 4px;
+}
+
+.md-grid {
+  margin-left: 0;
+  max-width: 75rem;
+}
+
+.md-typeset h1 {
+    line-height: 1;
+    margin: 0;
+}
+
+*, ::after, ::before {
+  box-sizing: unset;
+}
+/* stylelint-disable selector-class-pattern */
+.md-main__inner {
+    margin-top: 0;
+}
+
+.md-sidebar--secondary {
+  display: none;
+  width: 20px;
+}
+/* stylelint-enable selector-class-pattern */
+.md-sidebar {
+  width:10rem
+}
+
+.md-content {
+  min-width: 80%;
+}
+
+/* logo */
+.md-header__button.md-logo {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+    height: 36px;
+    width: 320px;
+}
+
+/* Custom Pallete */
+[data-md-color-primary=fortinet] {
+    --md-primary-fg-color: #F0F0F0;
+    --md-primary-fg-color--light: #F0F0F0;
+    --md-primary-fg-color--dark: #000000;
+    --md-primary-bg-color: #000000;
+    --md-primary-bg-color--light:#000000;
+    --md-primary-fg-color--dark: #F0F0F0
+}
+[data-md-color-accent=fortinet] {
+    --md-accent-fg-color: transaprent;
+    --md-accent-fg-color--transparent: #da291c1a;
+    --md-accent-bg-color: #da291c;
+    --md-accent-bg-color--light:#da291c
+}
