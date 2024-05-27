@@ -81,7 +81,7 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
   font:
-    text: Roboto
+    text: Inter
     code: Roboto Mono
 
 markdown_extensions:
