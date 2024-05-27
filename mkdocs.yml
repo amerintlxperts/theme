@@ -29,7 +29,6 @@ theme:
   name: material
   include_sidebar: false
   custom_dir: docs/theme/overrides
-  logo: theme/logo.svg
   favicon: theme/favicon.ico
   icon:
     repo: fontawesome/brands/github
