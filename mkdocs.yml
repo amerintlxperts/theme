@@ -28,7 +28,7 @@ extra_css: [theme/extra.css]
 theme:
   name: material
   include_sidebar: false
-  custom_dir: docs/theme/overrides
+  custom_dir: docs/theme/
   favicon: theme/favicon.ico
   icon:
     repo: fontawesome/brands/github
