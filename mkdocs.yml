@@ -15,6 +15,7 @@ extra:
       link: https://www.youtube.com/channel/UCJHo4AuVomwMRzgkA5DQEOA
     - icon: custom/fc-lib-linkedin
       link: https://www.linkedin.com/company/fortinet/
+  homepage: https://amerintlxperts2024.github.io/.github/
 
 validation:
   omitted_files: warn
