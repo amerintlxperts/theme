@@ -1,0 +1,7 @@
+{
+  "image": "docker.io/robinmordasiewicz/devcontainer:latest",
+  "initializeCommand": "docker pull docker.io/robinmordasiewicz/devcontainer:latest",
+  "runArgs": [
+    "--hostname=devcontainer"
+  ]
+}
