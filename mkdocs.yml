@@ -6,4 +6,4 @@ site_author: Punta Cana, Dominican Republic - August 2024
 repo_name: "amerintlxperts2024/.github"
 repo_url: https://github.com/amerintlxperts2024/.github/
 edit_uri: edit/main/docs/
-INHERIT: theme/mkdocs.yml
+INHERIT: fortinet/mkdocs.yml
