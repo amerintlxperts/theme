@@ -90,7 +90,7 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg # yamllint disable-line
       options:
         custom_icons:
-          - .icons
+          - docs/theme/.icons
   - abbr
   - admonition
   - attr_list
