@@ -65,7 +65,12 @@ markdown_extensions:
         kwds:
           case: lower
   - tables
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
   - pymdownx.tilde
+
 
 plugins:
   - awesome-pages
