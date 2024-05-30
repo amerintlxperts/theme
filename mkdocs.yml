@@ -6,6 +6,7 @@ site_author: Punta Cana, Dominican Republic - August 2024
 
 extra:
   homepage: https://amerintlxperts2024.github.io/.github/
+  generator: false
   social:
     - icon: custom/fc-lib-facebook
       link: https://www.facebook.com/Fortinet/
