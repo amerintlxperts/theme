@@ -69,3 +69,5 @@ markdown_extensions:
 
 plugins:
   - awesome-pages
+  - search
+  - table-reader
