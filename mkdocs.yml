@@ -2,6 +2,7 @@
 edit_uri: edit/main/docs/
 # yamllint disable-line rule:line-length
 copyright: "Where Trust Meets Innovation"
+site_author: Punta Cana, Dominican Republic - August 2024
 
 extra:
   homepage: https://amerintlxperts2024.github.io/.github/
