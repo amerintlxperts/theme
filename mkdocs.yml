@@ -32,6 +32,9 @@ theme:
   font:
     text: Inter
     code: Roboto Mono
+  features:
+    - content.code.annotate
+    - content.code.copy
 
 markdown_extensions:
   - pymdownx.emoji:
@@ -55,6 +58,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format # yamllint disable-line
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tilde
 
 plugins:
