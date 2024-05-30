@@ -35,6 +35,7 @@ theme:
   features:
     - content.code.annotate
     - content.code.copy
+    - content.tabs.link
 
 markdown_extensions:
   - pymdownx.emoji:
