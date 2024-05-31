@@ -71,7 +71,7 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
 
-
 plugins:
   - awesome-pages
   - search
+  - with-pdf
