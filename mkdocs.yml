@@ -98,6 +98,5 @@ markdown_extensions:
 plugins:
   - awesome-pages
   - search
-  - include_dir_to_nav
   - with-pdf:
       output_path: ./docs/document.pdf
