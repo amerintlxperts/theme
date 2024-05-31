@@ -74,4 +74,5 @@ markdown_extensions:
 plugins:
   - awesome-pages
   - search
-  - with-pdf
+  - with-pdf:
+      output_path: docs/document.pdf
