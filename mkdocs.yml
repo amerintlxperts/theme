@@ -1,21 +1,21 @@
 ---
 edit_uri: edit/main/docs/
 # yamllint disable-line rule:line-length
-copyright: "Where Trust Meets Innovation"
+copyright: "Fortinet, Inc. All rights reserved."
 site_author: Punta Cana, Dominican Republic - August 2024
 
-extra:
-  homepage: https://amerintlxperts2024.github.io/.github/
-  generator: false
-  social:
-    - icon: custom/fc-lib-facebook
-      link: https://www.facebook.com/Fortinet/
-    - icon: custom/fc-lib-twitter
-      link: https://x.com/Fortinet
-    - icon: custom/fc-lib-youtube
-      link: https://www.youtube.com/channel/UCJHo4AuVomwMRzgkA5DQEOA
-    - icon: custom/fc-lib-linkedin
-      link: https://www.linkedin.com/company/fortinet/
+# extra:
+#   homepage: https://amerintlxperts2024.github.io/.github/
+#   generator: false
+#   social:
+#     - icon: custom/fc-lib-facebook
+#       link: https://www.facebook.com/Fortinet/
+#     - icon: custom/fc-lib-twitter
+#       link: https://x.com/Fortinet
+#     - icon: custom/fc-lib-youtube
+#       link: https://www.youtube.com/channel/UCJHo4AuVomwMRzgkA5DQEOA
+#     - icon: custom/fc-lib-linkedin
+#       link: https://www.linkedin.com/company/fortinet/
 
 validation:
   omitted_files: warn
@@ -26,6 +26,7 @@ theme:
   name: material
   custom_dir: docs/theme/
   logo: theme/logo.svg
+  logo_dark: theme/logo-dark.svg
   favicon: theme/favicon.ico
   icon:
     repo: fontawesome/brands/github
