@@ -75,4 +75,4 @@ plugins:
   - awesome-pages
   - search
   - with-pdf:
-      output_path: docs/document.pdf
+      output_path: ./docs/document.pdf
