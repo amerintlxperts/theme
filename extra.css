@@ -51,6 +51,13 @@
   width: 320px;
 }
 
+.logo-light {
+  border: 1px solid red;
+}
+.logo-dark {
+  border: 1px solid blue;
+}
+
 /* Custom Pallete */
 [data-md-color-primary="fortinet"] {
   --md-primary-fg-color: #f0f0f0;
