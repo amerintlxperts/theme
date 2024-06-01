@@ -4,9 +4,9 @@ edit_uri: edit/main/docs/
 copyright: "Fortinet, Inc. All rights reserved."
 site_author: Punta Cana, Dominican Republic - August 2024
 
-# extra:
-#   homepage: https://amerintlxperts2024.github.io/.github/
-#   generator: false
+extra:
+  homepage: https://docs.xperts2024.com
+  generator: false
 #   social:
 #     - icon: custom/fc-lib-facebook
 #       link: https://www.facebook.com/Fortinet/
