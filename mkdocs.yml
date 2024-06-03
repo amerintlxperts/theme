@@ -22,6 +22,9 @@ validation:
   absolute_links: warn
   unrecognized_links: warn
 
+extra_css:
+  - extra.css
+
 theme:
   name: material
   custom_dir: docs/theme/
