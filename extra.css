@@ -80,7 +80,9 @@
 
 [data-md-color-scheme="default"] .logo-dark {
   display: none !important;
+  border: 1px solid red;
 }
 [data-md-color-scheme="slate"] .logo-light {
   display: none !important;
+  border: 1px solid blue;
 }
