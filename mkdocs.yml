@@ -1,12 +1,12 @@
 ---
-edit_uri: edit/main/docs/
+# edit_uri: edit/main/docs/
 # yamllint disable-line rule:line-length
 copyright: "Fortinet, Inc. All rights reserved."
 site_author: Punta Cana, Dominican Republic - August 2024
 
-# extra:
-#   homepage: https://amerintlxperts2024.github.io/.github/
-#   generator: false
+extra:
+  homepage: https://docs.xperts2024.com
+  generator: false
 #   social:
 #     - icon: custom/fc-lib-facebook
 #       link: https://www.facebook.com/Fortinet/
@@ -22,14 +22,17 @@ validation:
   absolute_links: warn
   unrecognized_links: warn
 
+extra_css:
+  - extra.css
+
 theme:
   name: material
   custom_dir: docs/theme/
   logo: theme/logo.svg
   logo_dark: theme/logo-dark.svg
   favicon: theme/favicon.ico
-  icon:
-    repo: fontawesome/brands/github
+#  icon:
+#    repo: fontawesome/brands/github
   font:
     text: Inter
     code: Roboto Mono
