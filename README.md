@@ -1,3 +1,1 @@
-# Americas International Fortitinet Xperts 2024
-
-
+# Americas International Fortitinet Xperts

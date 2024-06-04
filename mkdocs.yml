@@ -2,7 +2,7 @@
 # edit_uri: edit/main/docs/
 # yamllint disable-line rule:line-length
 copyright: "Fortinet, Inc. All rights reserved."
-site_author: Punta Cana, Dominican Republic - August 2024
+site_author: "Docs Team"
 
 extra:
   homepage: https://docs.xperts2024.com
