@@ -51,13 +51,6 @@
   width: 320px;
 } */
 
-.logo-light {
-  border: 1px solid red;
-}
-.logo-dark {
-  border: 1px solid blue;
-}
-
 .deleteme {
   display: none;
 }
@@ -80,9 +73,7 @@
 
 [data-md-color-scheme="default"] .logo-dark {
   display: none !important;
-  border: 1px solid red;
 }
 [data-md-color-scheme="slate"] .logo-light {
   display: none !important;
-  border: 1px solid blue;
 }
