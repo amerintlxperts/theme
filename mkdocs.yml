@@ -37,6 +37,7 @@ theme:
     text: Inter
     code: Roboto Mono
   features:
+    - content.action.edit
     - content.action.view
     - content.code.annotate
     - content.code.copy
@@ -102,5 +103,9 @@ markdown_extensions:
 plugins:
   - awesome-pages
   - search
+  - git-committers:
+      enabled: true
+  - git-revision-date-localized:
+      enable_creation_date: true
   - with-pdf:
       output_path: document.pdf
