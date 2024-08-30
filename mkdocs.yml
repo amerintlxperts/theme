@@ -106,8 +106,6 @@ plugins:
       glob:
         - "README.md"
   - search
-  - git-committers:
-      repository: squidfunk/mkdocs-material
   - git-revision-date-localized:
       enable_creation_date: true
   - with-pdf:
