@@ -102,6 +102,9 @@ markdown_extensions:
 
 plugins:
   - awesome-pages
+  - exclude:
+      glob:
+        - "README.md"
   - search
   - git-committers:
       repository: squidfunk/mkdocs-material
