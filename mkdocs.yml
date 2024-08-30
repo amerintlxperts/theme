@@ -107,6 +107,6 @@ plugins:
         - "README.md"
   - search
   - git-revision-date-localized:
-      enable_creation_date: true
+      enable_creation_date: false
   - with-pdf:
       output_path: document.pdf
