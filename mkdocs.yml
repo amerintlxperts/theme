@@ -104,9 +104,9 @@ plugins:
   - exclude:
       glob:
         - "README.md"
-  - search
-  - enumerate-headings
   - awesome-pages
+  - enumerate-headings
+  - search
   - git-revision-date-localized:
       enable_creation_date: false
   - with-pdf:
