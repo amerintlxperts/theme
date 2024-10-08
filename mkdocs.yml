@@ -5,7 +5,7 @@ copyright: "Fortinet, Inc. All rights reserved."
 site_author: "Docs Team"
 
 extra:
-  homepage: https://docs.xperts2024.com
+  homepage: http://xpertshandsonlabs.eastus.azurecontainer.io
   generator: false
 #   social:
 #     - icon: custom/fc-lib-facebook
