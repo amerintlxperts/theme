@@ -12,8 +12,6 @@ on: # yamllint disable-line rule:truthy
   workflow_dispatch:
   push:
     branches: [main]
-    paths:
-      - "docs/**.md"
 
 jobs:
   terraform:
