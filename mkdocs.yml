@@ -101,12 +101,12 @@ markdown_extensions:
   - pymdownx.tilde
 
 plugins:
-  - awesome-pages
   - exclude:
       glob:
         - "README.md"
   - search
   - enumerate-headings
+  - awesome-pages
   - git-revision-date-localized:
       enable_creation_date: false
   - with-pdf:
