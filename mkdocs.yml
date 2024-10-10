@@ -1,5 +1,5 @@
 ---
-edit_uri: edit/main/
+#edit_uri: edit/main/
 # yamllint disable-line rule:line-length
 copyright: "Fortinet, Inc. All rights reserved."
 site_author: "Docs Team"
