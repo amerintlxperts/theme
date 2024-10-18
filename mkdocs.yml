@@ -106,6 +106,7 @@ plugins:
         - "README.md"
   - awesome-pages
   - search
+  - gh-admonitions
   - git-revision-date-localized:
       enable_creation_date: false
   - with-pdf:
