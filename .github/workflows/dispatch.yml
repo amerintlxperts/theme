@@ -1,4 +1,3 @@
----
 name: dispatch
 
 concurrency:
@@ -12,6 +11,8 @@ on: # yamllint disable-line rule:truthy
   workflow_dispatch:
   push:
     branches: [main]
+    paths-ignore:
+      - '.github/**'
 
 jobs:
   terraform:
@@ -22,6 +23,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PAT }}
-          repository: amerintlxperts/.github
+          repository: ${{ secrets.CONTROL_REPO }}
           event-type: docs
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
