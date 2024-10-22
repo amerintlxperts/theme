@@ -107,7 +107,7 @@ plugins:
   - awesome-pages
   - search
   - gh-admonitions
-  - literate-nav
+  - literate-nav:
       nav_file: SUMMARY.md
   - git-revision-date-localized:
       enable_creation_date: false
