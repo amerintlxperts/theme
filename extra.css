@@ -78,7 +78,7 @@
   display: none !important;
 }
 
-.md-header__title {
+[dir=ltr] .md-header__title {
     margin-left: 124px;
     margin-right: .4rem;
 }
