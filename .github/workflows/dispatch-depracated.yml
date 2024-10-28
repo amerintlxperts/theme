@@ -1,4 +1,4 @@
-name: dispatch
+name: dispatch-depracated
 
 concurrency:
   group: ${{ github.workflow }}
