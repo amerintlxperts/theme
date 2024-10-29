@@ -3,6 +3,7 @@
 # yamllint disable-line rule:line-length
 copyright: "Fortinet, Inc. All rights reserved."
 site_author: "Docs Team"
+site_name: "Hands on Labs"
 
 extra:
   homepage: http://xpertshandsonlabs.eastus.azurecontainer.io
