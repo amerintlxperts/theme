@@ -112,8 +112,8 @@ plugins:
       nav_file: SUMMARY.md
   - git-revision-date-localized:
       enable_creation_date: false
-  - with-pdf:
-      output_path: document.pdf
+  # - with-pdf:
+  #     output_path: document.pdf
 
 not_in_nav: |
   index.md
