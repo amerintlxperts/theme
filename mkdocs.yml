@@ -6,7 +6,7 @@ site_author: "Docs Team"
 site_name: "Hands on Labs"
 
 extra:
-  homepage: http://xpertshandsonlabs.eastus.azurecontainer.io
+  homepage: https://docs.amerintlxperts.com
   generator: false
 #   social:
 #     - icon: custom/fc-lib-facebook
