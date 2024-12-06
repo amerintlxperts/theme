@@ -29,8 +29,8 @@ extra_css:
 theme:
   name: material
   custom_dir: docs/theme/
-  logo: theme/logo.svg
-  logo_dark: theme/logo-dark.svg
+  logo: theme/XpertsSummitBanner.png
+  logo_dark: theme/XpertsSummitBanner.png
   favicon: theme/favicon.ico
 #  icon:
 #    repo: fontawesome/brands/github
