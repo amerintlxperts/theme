@@ -108,8 +108,8 @@ plugins:
   - awesome-pages
   - search
   - gh-admonitions
-  - chat:
-      docs_chat_endpoint: "https://ollama.robinmordasiewicz.amerintlxperts.com/api/chat"
+  # - chat:
+  #    docs_chat_endpoint: "https://ollama.robinmordasiewicz.amerintlxperts.com/api/chat"
   - literate-nav:
       nav_file: SUMMARY.md
 #  - git-revision-date-localized:
