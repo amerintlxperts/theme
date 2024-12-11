@@ -26,6 +26,7 @@ validation:
 extra_css:
   - extra.css
 
+use_directory_urls: false
 theme:
   name: material
   custom_dir: docs/theme/
