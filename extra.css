@@ -2,6 +2,10 @@
     height: 2.5rem;
 }
 
+.md-nav__title {
+  visibility: hidden;
+}
+
 /* .md-typeset .admonition,
 .md-typeset details {
   border-width: 0;
