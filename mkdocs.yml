@@ -47,6 +47,7 @@ theme:
     - header.autohide
     - navigation.footer
     - navigation.indexes
+    - navigation.tabs
     - toc.follow
   palette:
     - media: "(prefers-color-scheme)"
