@@ -102,3 +102,30 @@
     margin-right: auto;
     max-width: unset;
 }
+
+.md-header__topic {
+visibility: hidden;
+}
+
+.md-typeset h1 {
+visibility: hidden;
+font-size: 0em;
+line-height: 0;
+margin: 0 0 0;
+}
+
+.md-main__inner {
+margin-top: 0rem;
+}
+
+.md-content__inner {
+padding-top: 0rem;
+}
+
+.md-tabs {
+  width: auto;
+  z-index: 5;
+  position: absolute; /* Added absolute positioning */
+  top: 10px; /* Positioned 10px from the top */
+  left: 250px; /* Positioned 200px from the left */
+}
