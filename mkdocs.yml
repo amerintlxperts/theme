@@ -1,22 +1,22 @@
 ---
 # edit_uri: edit/main/
 # yamllint disable-line rule:line-length
-copyright: "Fortinet, Inc. All rights reserved."
+copyright: "Fortinet, Inc."
 site_author: "Docs Team"
 site_name: "Hands on Labs"
 
 extra:
   homepage: https://docs.amerintlxperts.com
   generator: false
-#  social:
-#    - icon: custom/fc-lib-facebook
-#      link: https://www.facebook.com/Fortinet/
-#    - icon: custom/fc-lib-twitter
-#      link: https://x.com/Fortinet
-#    - icon: custom/fc-lib-youtube
-#      link: https://www.youtube.com/channel/UCJHo4AuVomwMRzgkA5DQEOA
-#    - icon: custom/fc-lib-linkedin
-#      link: https://www.linkedin.com/company/fortinet/
+  social:
+    - icon: custom/fc-lib-facebook
+      link: https://www.facebook.com/Fortinet/
+    - icon: custom/fc-lib-twitter
+      link: https://x.com/Fortinet
+    - icon: custom/fc-lib-youtube
+      link: https://www.youtube.com/channel/UCJHo4AuVomwMRzgkA5DQEOA
+    - icon: custom/fc-lib-linkedin
+      link: https://www.linkedin.com/company/fortinet/
 
 validation:
   omitted_files: warn
