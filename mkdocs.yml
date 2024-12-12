@@ -29,7 +29,7 @@ extra_css:
 use_directory_urls: false
 theme:
   name: material
-  custom_dir: docs/theme/
+  custom_dir: docs/theme/partials
   logo: theme/XpertsSummitBanner.png
   logo_dark: theme/XpertsSummitBanner.png
   favicon: theme/favicon.ico
