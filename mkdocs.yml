@@ -23,8 +23,8 @@ validation:
   absolute_links: warn
   unrecognized_links: warn
 
-#extra_css:
-#  - theme/extra.css
+extra_css:
+  - theme/extra.css
 
 use_directory_urls: false
 theme:
