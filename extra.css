@@ -2,10 +2,11 @@
     white-space: nowrap;
 }
 
-.md-typeset .grid>.card {
+.md-typeset .grid {
+grid-gap: 1rem;
+margin: 1em 0;
 border: .1rem solid var(--md-default-fg-color--lightest);
 border-radius: 1rem;
-margin: unset;
 }
 
 .md-header__button.md-logo img, .md-header__button.md-logo svg {
