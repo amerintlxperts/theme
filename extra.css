@@ -2,6 +2,12 @@
     white-space: nowrap;
 }
 
+.md-typeset .grid>.card {
+border: .1rem solid var(--md-default-fg-color--lightest);
+border-radius: 1rem;
+margin: unset;
+}
+
 .md-header__button.md-logo img, .md-header__button.md-logo svg {
     height: 2.5rem;
 }
