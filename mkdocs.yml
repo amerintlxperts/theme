@@ -7,7 +7,7 @@ site_name: "Hands on Labs"
 
 extra:
   homepage: https://docs.amerintlxperts.com
-  generator: false
+  generator: true
   social:
     - icon: custom/fc-lib-facebook
       link: https://www.facebook.com/Fortinet/
