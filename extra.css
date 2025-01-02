@@ -151,10 +151,12 @@ padding-top: 0rem;
 img {
   border: 1px solid #000; /* 1-pixel solid border with black color */
   border-radius: 4px; /* Small rounded corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 img.logo-light,
 img.logo-dark {
     border: none;          /* Remove border */
     border-radius: 0;      /* Remove rounded corners */
+    box-shadow: none; 
 }
