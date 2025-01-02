@@ -147,3 +147,8 @@ padding-top: 0rem;
   top: 10px; /* Positioned 10px from the top */
   left: 250px; /* Positioned 200px from the left */
 }
+
+img {
+  border: 1px solid #000; /* 1-pixel solid border with black color */
+  border-radius: 4px; /* Small rounded corners */
+}
