@@ -160,3 +160,9 @@ img.logo-dark {
     border-radius: 0;      /* Remove rounded corners */
     box-shadow: none; 
 }
+
+.grid.cards img {
+    border: none;
+    border-radius: 0;      /* Remove rounded corners */
+    box-shadow: none; 
+}
