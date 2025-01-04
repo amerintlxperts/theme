@@ -18,7 +18,7 @@ on: # yamllint disable-line rule:truthy
 jobs:
   terraform:
     name: "Trigger Build"
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
 
       - name: Repository Dispatch
