@@ -31,7 +31,7 @@ theme:
   name: material
   custom_dir: docs/theme
   logo: theme/XpertsSummitBanner.png
-  logo_dark: theme/XpertsSummitBanner.png
+  logo_dark: theme/XpertsSummitBanner-dark.png
   favicon: theme/favicon.ico
   # icon:
   #   repo: fontawesome/brands/github
