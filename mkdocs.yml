@@ -111,6 +111,8 @@ plugins:
   - awesome-pages
   - search
   - gh-admonitions
+  - glightbox:
+      zoomable: true
   # - chat:
   #    docs_chat_endpoint: "https://ollama.robinmordasiewicz.amerintlxperts.com/api/chat"
   - literate-nav:
