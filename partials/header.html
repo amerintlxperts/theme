@@ -47,7 +47,6 @@
     </a>
 
       <!-- Navigation tabs (collapsing) -->
-      LLLLLLLLLLLLL tabs
       {% block tabs %}
         {% if "navigation.tabs.sticky" not in features %}
           {% if "navigation.tabs" in features %}
@@ -66,12 +65,12 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <span class="md-ellipsis">BAZZZZZZZZZZZ SITE_NAME
+          <span class="md-ellipsis">
             {{ config.site_name }}
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">ZZZZALLL TITLE
+          <span class="md-ellipsis">
             {% if page.meta and page.meta.title %}
               {{ page.meta.title }}
             {% else %}
@@ -118,10 +117,11 @@
     {% endif %}
   </nav>
 
-  <!-- Navigation tabs (sticky) -->FOOOOOOOOOOOOO
+  <!-- Navigation tabs (sticky) -->
   {% if "navigation.tabs.sticky" in features %}
     {% if "navigation.tabs" in features %}
       {% include "partials/tabs.html" %}
+      fooooooooo
     {% endif %}
   {% endif %}
 </header>
