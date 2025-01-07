@@ -3,7 +3,7 @@
 }
 
 .grid.cards {
-    margin-left: 100px;
+    margin-left: 15px;
     margin-right: 100px;
 }
 
@@ -112,7 +112,7 @@ border-radius: .5rem;
 .md-header__button.md-logo {
     margin: .2rem;
     padding: .4rem;
-    margin-left: 45px;
+    margin-left: 15px;
 }
 
 .md-grid {
@@ -122,18 +122,20 @@ border-radius: .5rem;
 }
 
 .md-header__topic {
-visibility: hidden;
+  visibility: hidden;
 }
 
+/*
 .md-typeset h1 {
-visibility: hidden;
-font-size: 0em;
-line-height: 0;
-margin: 0 0 0;
+  visibility: hidden;
+  font-size: 0em;
+  line-height: 0;
+  margin: 0 0 0;
 }
+*/
 
 .md-main__inner {
-margin-top: 0rem;
+  margin-top: 0rem;
 }
 
 .md-content__inner {
