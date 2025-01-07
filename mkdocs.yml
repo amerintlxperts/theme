@@ -71,7 +71,6 @@ theme:
         name: Switch to system preference
 
 markdown_extensions:
-  - lightgallery
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji # yamllint disable-line
       emoji_generator: !!python/name:material.extensions.emoji.to_svg # yamllint disable-line
