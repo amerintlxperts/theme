@@ -110,6 +110,7 @@ plugins:
       glob:
         - "README.md"
   - awesome-pages
+  - exporter
   - search
 #  - git-authors
   - gh-admonitions
