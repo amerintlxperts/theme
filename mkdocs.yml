@@ -111,6 +111,7 @@ plugins:
         - "README.md"
   - awesome-pages
   - search
+  - markdownextradata
   - git-authors
   - gh-admonitions
   - glightbox:
