@@ -102,6 +102,7 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.keys
   - pymdownx.mark
+  - pymdownx.smartsymbols
   - pymdownx.tilde
 
 plugins:
@@ -110,6 +111,7 @@ plugins:
         - "README.md"
   - awesome-pages
   - search
+#  - git-authors
   - gh-admonitions
   - glightbox:
       zoomable: true
