@@ -111,6 +111,7 @@ plugins:
         - "README.md"
   - awesome-pages
   - search
+  - git-authors
   - gh-admonitions
   - glightbox:
       zoomable: true
