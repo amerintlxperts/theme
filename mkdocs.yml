@@ -113,7 +113,8 @@ plugins:
         - "README.md"
   - awesome-pages
   - search
-  - macros
+  - macros:
+      render_by_default: false
   - gh-admonitions
   - glightbox:
       zoomable: true
