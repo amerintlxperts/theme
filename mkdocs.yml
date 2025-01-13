@@ -4,6 +4,7 @@
 copyright: "Fortinet, Inc."
 site_author: "Docs Team"
 site_name: "Hands on Labs"
+  #docs_dir: "/docs"
 
 extra:
   homepage: https://docs.amerintlxperts.com
@@ -29,7 +30,8 @@ extra_css:
 use_directory_urls: false
 theme:
   name: material
-  custom_dir: docs/theme
+  # custom_dir: docs/theme
+  custom_dir: !ENV [CUSTOM_DIR, "docs/theme"]
   logo: theme/XpertsSummitBanner.png
   logo_dark: theme/XpertsSummitBanner-dark.png
   favicon: theme/favicon.ico
@@ -112,6 +114,7 @@ plugins:
   - awesome-pages
   - exporter
   - search
+  - macros
 #  - git-authors
   - gh-admonitions
   - glightbox:
@@ -122,7 +125,14 @@ plugins:
       nav_file: SUMMARY.md
 #  - git-revision-date-localized:
 #      enable_creation_date: false
-  - with-pdf:
-      output_path: document.pdf
+#  - with-pdf:
+#      output_path: document.pdf
+  - exporter:
+      formats:
+        pdf:
+          aggregator:
+            enabled: !ENV [MKDOCS_EXPORTER_PDF, false]
+            output: document.pdf
+            covers: all
 not_in_nav: |
   index.md
