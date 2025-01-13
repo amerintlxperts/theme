@@ -29,7 +29,8 @@ extra_css:
 use_directory_urls: false
 theme:
   name: material
-  custom_dir: docs/theme
+  # custom_dir: docs/theme
+  custom_dir: !ENV [CUSTOM_DIR, "docs/theme"]
   logo: theme/XpertsSummitBanner.png
   logo_dark: theme/XpertsSummitBanner-dark.png
   favicon: theme/favicon.ico
