@@ -122,8 +122,9 @@ plugins:
   - exporter:
       formats:
         pdf:
+          enabled: !ENV [MKDOCS_EXPORTER_PDF_ENABLED, false]
           aggregator:
-            enabled: !ENV [MKDOCS_EXPORTER_PDF, false]
+            enabled: true
             output: document.pdf
             covers: all
 not_in_nav: |
