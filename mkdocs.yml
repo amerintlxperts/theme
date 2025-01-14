@@ -3,8 +3,7 @@
 # yamllint disable-line rule:line-length
 copyright: "Fortinet, Inc."
 site_author: "Docs Team"
-site_name: "Hands on Labs"
-  #docs_dir: "/docs"
+site_name: !ENV [MKDOCS_SITE_NAME, "Hands on Labs"]
 
 extra:
   homepage: https://docs.amerintlxperts.com
