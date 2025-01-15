@@ -123,9 +123,9 @@ plugins:
       formats:
         pdf:
           stylesheets:
-            - /docs/docs/theme/covers/stylesheets/pdf.scss
+            - docs/theme/covers/stylesheets/pdf.scss
           covers:
-            front: /docs/docs/theme/covers/front.html.j2
+            front: docs/theme/covers/front.html.j2
           enabled: !ENV [MKDOCS_EXPORTER_PDF_ENABLED, false]
           aggregator:
             enabled: true
