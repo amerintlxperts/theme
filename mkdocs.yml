@@ -25,6 +25,9 @@ validation:
 
 extra_css:
   - theme/extra.css
+  
+extra_javascript:
+  - custom.js
 
 use_directory_urls: false
 theme:
