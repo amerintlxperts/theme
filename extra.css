@@ -175,6 +175,10 @@ img {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+img.twemoji {
+  border: 0px; /* 1-pixel solid border with black color */
+}
+
 img.logo-light,
 img.logo-dark {
     border: none;          /* Remove border */
