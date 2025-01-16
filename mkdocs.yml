@@ -125,14 +125,14 @@ plugins:
   - exporter:
       formats:
         pdf:
-          stylesheets:
-            - /docs/docs/theme/covers/stylesheets/pdf.scss
-          covers:
-            front: /docs/docs/theme/covers/front.html.j2
+#          stylesheets:
+#            - /docs/docs/theme/covers/stylesheets/pdf.scss
+#          covers:
+#            front: /docs/docs/theme/covers/front.html.j2
           enabled: !ENV [MKDOCS_EXPORTER_PDF_ENABLED, false]
           aggregator:
             enabled: true
             output: !ENV [MKDOCS_PDF_FILENAME, "document.pdf"]
-            covers: front
+#            covers: front
 not_in_nav: |
   index.md
