@@ -122,8 +122,8 @@ plugins:
   - exporter:
       formats:
         pdf:
-          covers:
-            front: /docs/docs/theme/covers/front.html.j2
+#          covers:
+#            front: /docs/docs/theme/covers/front.html.j2
           enabled: !ENV [MKDOCS_EXPORTER_PDF_ENABLED, false]
           aggregator:
             enabled: true
