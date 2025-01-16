@@ -126,6 +126,7 @@ plugins:
           aggregator:
             enabled: true
             output: !ENV [MKDOCS_PDF_FILENAME, "document.pdf"]
-            covers: all
+            covers:
+              front: covers/front.html.j2
 not_in_nav: |
   index.md
