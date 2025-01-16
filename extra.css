@@ -178,7 +178,7 @@ img {
 img.twemoji {
   border: 0px; /* 1-pixel solid border with black color */
   border-radius: 0px;
-  box-shadow: 0px;
+  box-shadow: none;
 }
 
 img.logo-light,
