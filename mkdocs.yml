@@ -127,6 +127,6 @@ plugins:
             enabled: true
             output: !ENV [MKDOCS_PDF_FILENAME, "document.pdf"]
             covers:
-              front: covers/front.html.j2
+              front: /docs/docs/theme/covers/front.html.j2
 not_in_nav: |
   index.md
