@@ -133,6 +133,6 @@ plugins:
           aggregator:
             enabled: true
             output: !ENV [MKDOCS_PDF_FILENAME, "document.pdf"]
-            covers: front
+            covers: limits
 not_in_nav: |
   index.md
