@@ -33,6 +33,11 @@ summary::after {
     image-rendering: optimizeQuality;
   }
 
+  .no-shadow {
+    box-shadow: none !important;
+    border: none !important;
+  }
+
   .logo {
     position: absolute;
     top: calc(2cm);
