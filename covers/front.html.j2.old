@@ -36,7 +36,7 @@
       margin-top: calc(var(--height) / 2 - var(--offset) - 2cm);
       font-size: 13pt;
 
-      h1 {
+      > .title {
         font-size: 32pt;
         font-weight: 500;
         line-height: 1.1;
@@ -45,7 +45,7 @@
         string-set: title content(text);
       }
 
-      h2 {
+      > .version {
         line-height: 1;
         font-size: 10pt;
         font-family: monospace;
@@ -57,7 +57,7 @@
     @top-center {
       font-size: 9pt;
       color: #7f7f7f;
-      content: 'Lab Guide — Americas International xPerts 2025';
+      content: '{{ config.site_name }}' ' — ' string(title);
     }
   }
 
@@ -84,7 +84,8 @@
     </div>
   </div>
   <section>
-    <h1>Lab Guide</h1>
-    <h2>Americas International xPerts 2025</h2>
+    <div class="brand">{{ config.site_name }}</div>
+    <div class="version">{{ version }}</div>
+    <div class="title">{{ page.title }}</div>
   </section>
 </div>
