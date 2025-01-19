@@ -115,6 +115,10 @@ plugins:
         - "README.md"
   - awesome-pages
   - search
+  - content-tabs
+  - asciinema-player
+  - mark-as-read
+  - drawio
   - macros:
       render_by_default: false
   - gh-admonitions
