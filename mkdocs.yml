@@ -117,7 +117,10 @@ plugins:
   - search
   - content-tabs
   - asciinema-player
-  - mark-as-read
+  - mark-as-read:
+      texts:
+        mark_as_read: Mark as complete
+        mark_as_unread: Mark as incomplete
   - drawio
   - macros:
       render_by_default: false
