@@ -1,5 +1,19 @@
-{% if page.meta and "mark_as_read" in page.meta %}
-    <link rel="stylesheet" href="{{config.site_url}}css/mark-as-read-button.css">
+{% if page.meta and "mark_as_read" in page.meta%}
+    <style>
+        .mark-as-read-button {
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 99px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
     <button class="mark-as-read-button" onclick="markAsReadButtonOnClick()"></button>
-    <script src="{{config.site_url}}js/mark-as-read-button.js"></script>
+    <script src="/js/mark-as-read-button.js"></script>
 {% endif %}
