@@ -4,6 +4,9 @@
 copyright: "Fortinet, Inc."
 site_author: "Docs Team"
 site_name: !ENV [MKDOCS_SITE_NAME, "Hands on Labs"]
+site_url: !ENV [MKDOCS_SITE_URL, null]
+repo_url: !ENV [MKDOCS_REPO_URL, null]
+edit_uri: !ENV [MKDOCS_EDIT_URL, null] 
 
 extra:
   homepage: https://docs.amerintlxperts.com
