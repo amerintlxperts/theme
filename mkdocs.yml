@@ -9,7 +9,7 @@ repo_url: !ENV [MKDOCS_REPO_URL, null]
 edit_uri: !ENV [MKDOCS_EDIT_URL, null] 
 
 extra:
-  homepage: https://docs.amerintlxperts.com
+  homepage: !ENV [MKDOCS_HOMEPAGE, "https://docs.amerintlxperts.com"]
   generator: true
   social:
     - icon: custom/fc-lib-facebook
