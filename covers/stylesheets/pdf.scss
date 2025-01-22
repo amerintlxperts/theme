@@ -30,6 +30,8 @@
   left: 0;
   width: 100%;
   height: auto;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 .cover-page .logo {
@@ -38,6 +40,8 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+  box-shadow: none !important;
+  border: none !important;
 
   > div {
     width: 11cm;
