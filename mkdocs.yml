@@ -125,14 +125,14 @@ plugins:
   - exporter:
       formats:
         pdf:
-#          stylesheets:
-#            - docs/theme/covers/stylesheets/pdf.scss
-#          covers:
-#            front: docs/theme/covers/front.html.j2
+          stylesheets:
+            - docs/theme/covers/stylesheets/pdf.scss
+          covers:
+            front: docs/theme/covers/front.html.j2
           enabled: !ENV [MKDOCS_EXPORTER_PDF_ENABLED, false]
           aggregator:
             enabled: true
             output: !ENV [MKDOCS_PDF_FILENAME, "document.pdf"]
-#            covers: limits
+            covers: limits
 not_in_nav: |
   index.md
