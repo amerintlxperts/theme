@@ -5,3 +5,120 @@
     content: 'Americas International xPerts - 2025';
   }
 }
+
+.cover-page {
+  isolation: isolate; /* Keep styles confined to this container */
+  margin: -2.5cm;
+  padding: 0;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  box-sizing: border-box; /* Ensure borders are included */
+  page-break-after: always; /* Force a new page after the cover */
+  background-color: #307fe2;
+  position: absolute; /* Anchor the cover page */
+  box-shadow: inset 0 0 0 1.2cm #307fe2; /* Fake inner border */
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.cover-page img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.cover-page .logo {
+  position: absolute;
+  top: calc(2cm);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  box-shadow: none !important;
+  border: none !important;
+
+  > div {
+    width: 11cm;
+    height: 11cm;
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.cover-page section {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+
+  h1 {
+    font-size: 32pt;
+    color: white;
+    margin-bottom: 0.2em;
+  }
+
+  h2 {
+    font-size: 10pt;
+    color: white;
+    margin-top: 0;
+  }
+}
+
+
+
+body, html, .md-main, .md-content, .md-content__inner {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100%;
+
+}
+
+/* SCSS: Reset Styles for Main Content */
+.content {
+  margin: 1.2cm;
+  background-color: white;
+  color: black;
+  all: revert !important;
+
+
+  h1, h2, h3, p, img {
+    all: revert !important; /* Reset inherited styles */
+  }
+
+  /* Reapply standard styles */
+  h1 {
+    font-size: 24pt;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 18pt;
+  }
+
+  p {
+    font-size: 12pt;
+    margin-bottom: 1em;
+  }
+}
+
+.cover-page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure elements respect their borders */
+  background: none; /* Remove inherited background */
+  border: none; /* Remove inherited borders */
+  color: inherit; /* Keep text color consistent */
+  font-family: inherit; /* Ensure consistent fonts */
+}

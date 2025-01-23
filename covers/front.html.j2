@@ -1,131 +1,8 @@
-<style>
-@page {
-  size: letter;
-  margin: 1.2cm;
-  background-color: #307fe2;
-}
-
-hr:has(+ div.md-source-file), .md-source-file {
-  display: none !important;
-}
-
-summary::after {
-  display: none;
-}
-
-
-.front-blahblah {
-  margin: 0 !important;
-  min-height: 100vh;
-  width: 100%;
-  page-break-after: always;
-  border: 1px solid #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #307fe2 !important;
-}
-
-  
-
-  img {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    image-rendering: optimizeQuality;
-  }
-
-  .logo {
-    position: absolute;
-    top: calc(2cm);
-    left: 50%;
-    transform: translateX(-50%);
-
-    > div {
-      width: 5cm;  /* Increased logo size */
-      height: 5cm; /* Increased logo size */
-      text-align: center;
-      transform: scale(2.0);
-
-      img {
-        width: 100%;
-        height: 100%;
-        position: static;
-        filter: none !important
-      }
-    }
-  }
-
-.front-blahblah section {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    max-width: 10.25cm;
-    word-wrap: break-word;
-    font-size: 13pt;
-    text-align: center;
-}
-
-.front-blahblah section h1 {
-    font-size: 32pt;
-    font-weight: 500;
-    line-height: 1.1;
-    margin-bottom: 0.5em;
-    color: #fff;
-}
-
-.front-blahblah section h2 {
-    line-height: 1;
-    font-size: 10pt;
-    font-family: monospace;
-    margin: 0;
-}
-    > .title {
-      font-size: 26pt;
-      font-weight: 500;
-      line-height: 1.1;
-      color: #fff;
-    }
-  }
-}
-
-  .no-shadow {
-    box-shadow: none !important;
-    border: none !important;
-  }
-
-h1, h2, h3 {
-  string-set: chapter content();
-}
-
-body {
-  print-color-adjust: exact;
-  text-rendering: geometricPrecision;
-}
-
-.md-main .md-main__inner {
-  margin: 0;
-}
-
-.md-content .md-content__inner {
-  margin: 0;
-  padding: 0;
-
-  &::before {
-    height: 0;
-  }
-}
-</style>
-<div class="front-blahblah">
-  <img src="theme/images/background.png" class="no-shadow">
+<div class="cover-page">
+  <img src="theme/background.png" alt="Background" class="no-shadow">
   <div class="logo">
     <div>
-      <img src="theme/images/logo-dark.svg" class="no-shadow">
+      <img src="theme/logo-dark.svg" alt="Logo" class="no-shadow">
     </div>
   </div>
   <section>
@@ -133,3 +10,6 @@ body {
     <h2>Americas International xPerts 2025</h2>
   </section>
 </div>
+
+<!-- Blank Page for Isolation -->
+<div style="page-break-after: always;"></div>
