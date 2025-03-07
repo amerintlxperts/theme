@@ -4,6 +4,7 @@
 copyright: "Fortinet, Inc."
 site_author: "Docs Team"
 site_name: !ENV [MKDOCS_SITE_NAME, "Hands on Labs"]
+site_dir: site/rendered
 
 extra:
   homepage: https://docs.amerintlxperts.com
