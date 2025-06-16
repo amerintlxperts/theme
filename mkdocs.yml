@@ -4,9 +4,14 @@
 copyright: "Fortinet, Inc."
 site_author: "Docs Team"
 site_name: !ENV [MKDOCS_SITE_NAME, "Hands on Labs"]
+#site_dir: !ENV [MKDOCS_SITE_DIR, "site"]
+site_dir: "site/rendered"
+site_url: !ENV [MKDOCS_SITE_URL, null]
+repo_url: !ENV [MKDOCS_REPO_URL, null]
+edit_uri: !ENV [MKDOCS_EDIT_URL, null] 
 
 extra:
-  homepage: https://docs.amerintlxperts.com
+  homepage: !ENV [MKDOCS_HOMEPAGE, "https://docs.amerintlxperts.com"]
   generator: true
   social:
     - icon: custom/fc-lib-facebook
@@ -115,6 +120,13 @@ plugins:
         - "README.md"
   - awesome-pages
   - search
+  - content-tabs
+  - asciinema-player
+  - mark-as-read:
+      texts:
+        mark_as_read: Mark as complete
+        mark_as_unread: Mark as incomplete
+  - drawio
   - macros:
       render_by_default: false
   - gh-admonitions
