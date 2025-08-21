@@ -61,6 +61,15 @@ border-radius: .5rem;
   margin-left: 10px;
 }
 
+.md-sidebar__inner {
+  padding-right: calc(100% - 14.5rem) !important;
+}
+
+ .md-sidebar {
+  width: 15rem;
+  padding-top: 0.8rem;
+}
+
 /* .md-typeset .admonition,
 .md-typeset details {
   border-width: 0;
@@ -92,10 +101,7 @@ border-radius: .5rem;
   width: 20px;
 }
 /* stylelint-enable selector-class-pattern */
- .md-sidebar {
-  width: 14rem;
-  padding-top: 0.8rem;
-}
+
 /*
 .md-content {
   min-width: 80%;
