@@ -139,6 +139,8 @@ plugins:
         pdf:
           stylesheets:
             - docs/theme/covers/stylesheets/pdf.scss
+          covers:
+            front: docs/theme/covers/front.html.j2
           enabled: !ENV [MKDOCS_EXPORTER_PDF_ENABLED, false]
           aggregator:
             enabled: true
