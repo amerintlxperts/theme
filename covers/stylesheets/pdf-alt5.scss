@@ -1,0 +1,162 @@
+@page {
+  @bottom-center {
+    content: none;
+  }
+}
+
+.cover-page {
+  isolation: isolate;
+  margin: -2.5cm;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  page-break-after: always;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+}
+
+.cover-page .site-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.cover-page .gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Enhanced gradient with better brand alignment and smoother transitions */
+  background: linear-gradient(45deg, 
+    #DA291C 0%,      /* Fortinet red */
+    #B8242A 25%,     /* Deeper red transition - extended */
+    #1E4B99 45%,     /* Deep blue middle - pushed further */
+    #307FE2 70%,     /* Fortinet blue */
+    #45A0E8 85%,     /* Lighter blue transition */
+    #2CCCD3 100%     /* Cyan accent */
+  );
+  opacity: 0.88;
+  z-index: 1.5;
+  /* Better gradient rendering for PDF */
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+}
+
+.cover-page .bg-lines-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  /* Enhanced texture visibility with better contrast - made more visible */
+  filter: brightness(2.6) contrast(1.0) opacity(0.35);
+  /* Subtle animation for depth */
+  transform: scale(1.02);
+}
+
+.cover-page .cover-logo {
+  position: absolute;
+  top: 22%;  /* Slightly higher positioning */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px; /* Slightly larger */
+  height: auto;
+  /* Enhanced drop shadow for better depth */
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.4)) drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  z-index: 10;
+  /* Subtle glow effect */
+  -webkit-filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.1));
+}
+
+.cover-page .cover-title {
+  position: absolute;
+  left: 50%;
+  top: 78%; /* Adjusted positioning for better balance */
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 10;
+  /* Add subtle backdrop for better text readability */
+  padding: 1em 2em;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+}
+
+.cover-page .cover-title h1 {
+  font-size: 36pt; /* Slightly larger */
+  color: white;
+  margin-bottom: 0.15em;
+  font-weight: 300; /* Lighter weight for elegance */
+  letter-spacing: 0.02em;
+  /* Text shadow for depth */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cover-page .cover-title h2 {
+  font-size: 11pt; /* Slightly larger */
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 0;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  /* Subtle text shadow */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+body, html, .md-main, .md-content, .md-content__inner {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100%;
+}
+
+/* SCSS: Reset Styles for Main Content */
+.content {
+  margin: 1.2cm;
+  background-color: white;
+  color: black;
+  all: revert !important;
+
+  h1, h2, h3, p, img {
+    all: revert !important;
+  }
+
+  h1 {
+    font-size: 24pt;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 18pt;
+  }
+
+  p {
+    font-size: 12pt;
+    margin-bottom: 1em;
+  }
+}
+
+.cover-page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+}
