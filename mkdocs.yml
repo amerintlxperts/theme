@@ -8,7 +8,7 @@ site_name: !ENV [MKDOCS_SITE_NAME, "Hands on Labs"]
 site_dir: "site/rendered"
 site_url: !ENV [MKDOCS_SITE_URL, null]
 repo_url: !ENV [MKDOCS_REPO_URL, null]
-edit_uri: !ENV [MKDOCS_EDIT_URL, null] 
+edit_uri: !ENV [MKDOCS_EDIT_URL, null]
 
 extra:
   homepage: !ENV [MKDOCS_HOMEPAGE, "https://docs.amerintlxperts.com"]
@@ -30,7 +30,7 @@ validation:
 
 extra_css:
   - theme/extra.css
-  
+
 extra_javascript:
   - custom.js
 
@@ -81,8 +81,12 @@ theme:
 
 markdown_extensions:
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji # yamllint disable-line
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg # yamllint disable-line
+      emoji_index:
+        !!python/name:material.extensions.emoji.twemoji # yamllint disable-line
+
+      emoji_generator:
+        !!python/name:material.extensions.emoji.to_svg # yamllint disable-line
+
       options:
         custom_icons:
           - docs/theme/.icons
@@ -100,7 +104,9 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format # yamllint disable-line
+          format:
+            !!python/name:pymdownx.superfences.fence_code_format # yamllint disable-line
+
   - pymdownx.tabbed:
       alternate_style: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify
@@ -137,8 +143,10 @@ plugins:
   - exporter:
       formats:
         pdf:
+          concurrency: 16
           stylesheets:
             - docs/theme/covers/stylesheets/pdf-alt6.scss
+            - docs/theme/covers/stylesheets/pdf-tables.scss
           covers:
             front: docs/theme/covers/front-alt6.html.j2
           enabled: !ENV [MKDOCS_EXPORTER_PDF_ENABLED, false]
