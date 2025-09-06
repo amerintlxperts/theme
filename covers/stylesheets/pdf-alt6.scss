@@ -1,12 +1,6 @@
-@page {
-  @bottom-center {
-    content: none;
-  }
-}
-
 .cover-page {
   isolation: isolate;
-  margin: -2.5cm;
+  margin: -2cm -1.5cm;
   padding: 0;
   height: 100vh;
   width: 100vw;
@@ -36,7 +30,7 @@
   width: 100%;
   height: 100%;
   /* Multi-corner radial gradient matching marketing site */
-  background: 
+  background:
     radial-gradient(ellipse at top left, rgba(180, 36, 42, 0.8) 0%, rgba(180, 36, 42, 0) 50%),
     radial-gradient(ellipse at top right, rgba(44, 204, 211, 0.8) 0%, rgba(44, 204, 211, 0) 50%),
     radial-gradient(ellipse at bottom center, rgba(30, 75, 153, 0.9) 0%, rgba(30, 75, 153, 0) 70%),
@@ -66,10 +60,12 @@
 
 .cover-page .cover-logo {
   position: absolute;
-  top: 22%;  /* Slightly higher positioning */
+  top: 22%;
+  /* Slightly higher positioning */
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 400px; /* Slightly larger */
+  max-width: 400px;
+  /* Slightly larger */
   height: auto;
   /* Enhanced drop shadow for better depth */
   filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.4)) drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
@@ -84,7 +80,8 @@
 .cover-page .cover-title {
   position: absolute;
   left: 50%;
-  top: 78%; /* Adjusted positioning for better balance */
+  top: 78%;
+  /* Adjusted positioning for better balance */
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
@@ -97,17 +94,20 @@
 }
 
 .cover-page .cover-title h1 {
-  font-size: 36pt; /* Slightly larger */
+  font-size: 36pt;
+  /* Slightly larger */
   color: white;
   margin-bottom: 0.15em;
-  font-weight: 300; /* Lighter weight for elegance */
+  font-weight: 300;
+  /* Lighter weight for elegance */
   letter-spacing: 0.02em;
   /* Text shadow for depth */
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .cover-page .cover-title h2 {
-  font-size: 11pt; /* Slightly larger */
+  font-size: 11pt;
+  /* Slightly larger */
   color: rgba(255, 255, 255, 0.9);
   margin-top: 0;
   font-weight: 400;
@@ -117,7 +117,11 @@
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-body, html, .md-main, .md-content, .md-content__inner {
+body,
+html,
+.md-main,
+.md-content,
+.md-content__inner {
   margin: 0 !important;
   padding: 0 !important;
   height: 100%;
@@ -130,7 +134,11 @@ body, html, .md-main, .md-content, .md-content__inner {
   color: black;
   all: revert !important;
 
-  h1, h2, h3, p, img {
+  h1,
+  h2,
+  h3,
+  p,
+  img {
     all: revert !important;
   }
 
