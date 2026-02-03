@@ -39,8 +39,8 @@ theme:
   name: material
   # custom_dir: docs/theme
   custom_dir: !ENV [CUSTOM_DIR, "docs/theme"]
-  logo: theme/XpertsSummitBanner.png
-  logo_dark: theme/XpertsSummitBanner-dark.png
+  logo: !ENV [MKDOCS_LOGO, "theme/XpertsSummitBanner-canada.png"]
+  logo_dark: !ENV [MKDOCS_LOGO_DARK, "theme/XpertsSummitBanner-canada-dark.png"]
   favicon: theme/favicon.ico
   # icon:
   #   repo: fontawesome/brands/github
