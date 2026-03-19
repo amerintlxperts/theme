@@ -33,7 +33,7 @@ extra_css:
 
 extra_javascript:
   - custom.js
-  - javascripts/student-selector.js
+  - docs/javascripts/student-selector.js
 
 use_directory_urls: false
 theme:
