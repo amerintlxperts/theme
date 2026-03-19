@@ -4,7 +4,7 @@ document$.subscribe(async function () {
   console.log("[student-selector] document$.subscribe triggered");
 
   const STORAGE_KEY = "selectedStudent";
-  const STUDENTS_FILE = "/data/students.txt";
+  const STUDENTS_FILE = "students.txt";
 
   async function loadStudents() {
     console.log("[student-selector] loading student file:", STUDENTS_FILE);
