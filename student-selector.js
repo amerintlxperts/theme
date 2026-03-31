@@ -77,20 +77,20 @@ document$.subscribe(async function () {
     });
 
     document.querySelectorAll(".student-link-fortiweb").forEach(el => {
-      const url = `https://${selectedId}-fortiweb.useast.cloudapp.azure.com:8443`;
+      const url = `https://${selectedId}-fortiweb.eastus.cloudapp.azure.com:8443`;
       el.href = url;
       el.textContent = url;
     });
 
     document.querySelectorAll(".student-link-windows").forEach(el => {
-      const host = `${selectedId}-windows.useast.cloudapp.azure.com:3389`;
-      el.href = `rdp://${selectedId}-windows.useast.cloudapp.azure.com:3389`;
+      const host = `${selectedId}-windows.eastus.cloudapp.azure.com:3389`;
+      el.href = `rdp://${selectedId}-windows.eastus.cloudapp.azure.com:3389`;
       el.textContent = host;
     });
 
     document.querySelectorAll(".student-link-ubuntu").forEach(el => {
-      const cmd = `ssh fwbadmin@${selectedId}-ubuntu.useast.cloudapp.azure.com`;
-      el.href = `ssh://fwbadmin@${selectedId}-ubuntu.useast.cloudapp.azure.com`;
+      const cmd = `ssh fwbadmin@${selectedId}-ubuntu.eastus.cloudapp.azure.com`;
+      el.href = `ssh://fwbadmin@${selectedId}-ubuntu.eastus.cloudapp.azure.com`;
       el.textContent = cmd;
     });
 
