@@ -15,14 +15,22 @@ document$.subscribe(async function () {
     }
 
     const text = await response.text();
-    const names = text
+    const lines = text
       .split("\n")
       .map(line => line.trim())
       .filter(Boolean);
 
-    const students = names.map((name, index) => {
+    const students = lines.map((line, index) => {
+      const parts = line.split(";");
+
+      if (parts.length >= 2) {
+        const id = parts[0].trim();
+        const name = parts.slice(1).join(";").trim();
+        return { id, name };
+      }
+
       const id = `student${String(index + 1).padStart(2, "0")}`;
-      return { id, name };
+      return { id, name: line };
     });
 
     console.log("[student-selector] students loaded:", students);
@@ -83,8 +91,8 @@ document$.subscribe(async function () {
     });
 
     document.querySelectorAll(".student-link-windows").forEach(el => {
-      const host = `${selectedId}-windows.eastus.cloudapp.azure.com:3389`;
-      el.href = `rdp://${selectedId}-windows.eastus.cloudapp.azure.com:3389`;
+      const host = `${selectedId}-client.eastus.cloudapp.azure.com:3389`;
+      el.href = `rdp://${selectedId}-client.eastus.cloudapp.azure.com:3389`;
       el.textContent = host;
     });
 
