@@ -150,10 +150,9 @@ plugins:
             - docs/theme/covers/stylesheets/pdf-tables.scss
           covers:
             front: docs/theme/covers/front-alt6.html.j2
+            back: docs/theme/covers/back-alt6.html.j2
           enabled: !ENV [MKDOCS_EXPORTER_PDF_ENABLED, false]
           aggregator:
-            enabled: true
-            output: !ENV [MKDOCS_PDF_FILENAME, "document.pdf"]
-            covers: none
+            enabled: false
 not_in_nav: |
   index.md
