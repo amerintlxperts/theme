@@ -141,8 +141,11 @@ border-radius: .5rem;
   --md-accent-bg-color--light: #da291c;
 }
 
-[data-md-color-scheme="default"] .logo-dark {
+.logo-dark {
   display: none !important;
+}
+[data-md-color-scheme="slate"] .logo-dark {
+  display: block !important;
 }
 [data-md-color-scheme="slate"] .logo-light {
   display: none !important;
