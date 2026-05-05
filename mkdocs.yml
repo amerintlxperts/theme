@@ -125,6 +125,7 @@ plugins:
   - exclude:
       glob:
         - "README.md"
+        - "FAIG-installer/**"
   - awesome-pages
   - search
   - content-tabs
