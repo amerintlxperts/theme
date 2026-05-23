@@ -130,6 +130,10 @@ plugins:
         - "licenses/**"
         - "survey-forticare/**"
         - "data/**"
+        - "scripts/**"
+        - "**/scripts/**"
+        - "terraform/**"
+        - "**/terraform/**"
   - awesome-pages
   - search
   - content-tabs
