@@ -126,6 +126,10 @@ plugins:
       glob:
         - "README.md"
         - "FAIG-installer/**"
+        - "docs/superpowers/**"
+        - "licenses/**"
+        - "survey-forticare/**"
+        - "data/**"
   - awesome-pages
   - search
   - content-tabs
