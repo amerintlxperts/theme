@@ -129,7 +129,6 @@ plugins:
         - "docs/superpowers/**"
         - "licenses/**"
         - "survey-forticare/**"
-        - "data/**"
         - "scripts/**"
         - "**/scripts/**"
         - "terraform/**"
