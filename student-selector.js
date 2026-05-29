@@ -1,6 +1,14 @@
 console.log("[student-selector] file loaded");
 
 document$.subscribe(async function () {
+  // Skip on pages that don't display the table — there's nothing for the
+  // fetched data to populate, and the unguarded fetch hits
+  // /ai/data/students.txt which is auth-protected, popping a basic-auth
+  // prompt on public landing pages that share this theme.
+  if (!document.querySelector("#student-assignment-table")) {
+    return;
+  }
+
   console.log("[student-selector] document$.subscribe triggered");
 
   const STORAGE_KEY = "selectedStudent";
