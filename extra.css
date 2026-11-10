@@ -407,6 +407,17 @@ img.logo-dark {
   opacity: 0.88;
 }
 
+/* Small label above a card title, e.g. "Track 4" / "Bonus Track" */
+.md-typeset .xp-card__eyebrow {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.6em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
 .md-typeset .xp-card a {
   color: #fff;
   text-decoration: underline;
