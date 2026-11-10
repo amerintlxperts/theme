@@ -65,9 +65,13 @@ border-radius: .5rem;
   padding-right: calc(100% - 14.5rem) !important;
 }
 
- .md-sidebar {
-  width: 15rem;
-  padding-top: 0.8rem;
+/* Desktop only: on mobile Material slides the drawer off by its own 12.1rem
+   width, so a wider sidebar left a 58px white strip over every page. */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar {
+    width: 15rem;
+    padding-top: 0.8rem;
+  }
 }
 
 /* .md-typeset .admonition,
@@ -220,4 +224,421 @@ img.logo-dark {
     border: none;
     border-radius: 0;      /* Remove rounded corners */
     box-shadow: none;
+}
+
+/* ==========================================================================
+   Workshop cards (content-site landing pages: ai, secops, enterprise-protection)
+   Mirrors the .labs-track-card style of the landing site's Hands-on Labs page
+   so the look carries from landing -> workshop. Namespaced .xp-* so it never
+   collides with the landing site's own hands-on-labs.css.
+   Track colours: .xp-cards--ai | .xp-cards--secops | .xp-cards--networking
+   ========================================================================== */
+
+/* Pages that use the card grid: hide the placeholder H1, go full width */
+.md-content:has(.xp-cards) .md-typeset > h1:first-of-type {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.md-main__inner:has(.xp-cards),
+.md-content:has(.xp-cards),
+.md-content:has(.xp-cards) .md-content__inner {
+  width: 100%;
+  max-width: none;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.md-content:has(.xp-cards) .md-content__inner {
+  padding: 0;
+}
+
+.md-content:has(.xp-cards) .md-content__inner::before {
+  display: none;
+}
+
+.xp-cards {
+  --track-start: #141414;
+  --track-mid: #333;
+  --track-end: #777;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 1.5vw, 1.75rem);
+  width: min(100%, 120rem);
+  margin: 0 auto;
+  padding: clamp(1rem, 2vw, 2rem);
+  box-sizing: border-box;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.xp-cards--secops {
+  --track-start: #007f82;
+  --track-mid: #0caeb4;
+  --track-end: #13cbd3;
+}
+
+.xp-cards--networking {
+  --track-start: #004985;
+  --track-mid: #0874d9;
+  --track-end: #118bff;
+}
+
+/* 4 cards -> one row of 4; 7+ cards -> rows of 4 on wide screens */
+.xp-cards:has(> .xp-card:nth-child(4):last-child) {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (min-width: 100rem) {
+  .xp-cards:has(> .xp-card:nth-child(7)) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.xp-card {
+  --card-hero-height: 15rem;
+  --card-overlay-rise: 5.5rem;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: clamp(1.35rem, 2vw, 2rem);
+  color: #fff;
+  background: linear-gradient(148deg, var(--track-start) 0%, var(--track-mid) 54%, var(--track-end) 100%);
+  box-shadow: 0 1rem 2.75rem rgba(7, 22, 42, 0.16);
+}
+
+.xp-card::before,
+.xp-card::after {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  pointer-events: none;
+}
+
+.xp-card::before {
+  top: calc(var(--card-hero-height) - var(--card-overlay-rise));
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-top-right-radius: 20% 7rem;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.xp-card::after {
+  top: 0;
+  right: 0;
+  width: 28%;
+  height: 7rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom-left-radius: 100% 20%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.08) 100%);
+}
+
+.xp-card__hero {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: var(--card-hero-height);
+  padding: clamp(1.75rem, 2.5vw, 2.5rem) clamp(1.25rem, 2vw, 2.2rem) 1.25rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Product icons are dark line-art; render them white like the track icons */
+.md-typeset .xp-card__icon {
+  display: block;
+  width: clamp(5rem, 6vw, 6.5rem);
+  height: clamp(5rem, 6vw, 6.5rem);
+  margin: 0 auto 1.25rem;
+  object-fit: contain;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: brightness(0) invert(1) drop-shadow(0 0.35rem 0.7rem rgba(0, 0, 0, 0.12));
+}
+
+.xp-card__hero > a.glightbox {
+  display: block !important;
+  width: fit-content;
+  margin: 0 auto 1.25rem;
+  padding: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  pointer-events: none;
+}
+
+.xp-card__hero > a.glightbox .xp-card__icon {
+  margin-bottom: 0;
+}
+
+.md-typeset .xp-card__hero h2 {
+  margin: auto 0 0;
+  color: inherit;
+  font-size: clamp(1.35rem, 1.45vw, 1.75rem);
+  font-weight: 750;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset .xp-card__subtitle {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.72em;
+  font-weight: 500;
+  letter-spacing: 0;
+  opacity: 0.88;
+}
+
+.md-typeset .xp-card a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.55);
+  text-underline-offset: 0.18em;
+}
+
+.md-typeset .xp-card__hero a {
+  text-decoration: none;
+}
+
+.md-typeset .xp-card a:hover {
+  color: #fff;
+  text-decoration-color: #fff;
+}
+
+.md-typeset .xp-card a:focus-visible {
+  border-radius: 0.2rem;
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+.xp-card__body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.25rem clamp(1.25rem, 1.7vw, 2rem) 2rem;
+  text-align: left;
+}
+
+.md-typeset .xp-card__body p {
+  margin: 0 0 0.85rem;
+  color: inherit;
+  font-size: clamp(0.8rem, 0.8vw, 0.9rem);
+  line-height: 1.55;
+}
+
+.md-typeset .xp-card__body strong {
+  color: inherit;
+}
+
+.xp-card__divider {
+  width: 2.2rem;
+  height: 2px;
+  margin: 0.4rem auto 1.1rem;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.md-typeset .xp-card__body h3 {
+  margin: 0 0 0.35rem;
+  color: inherit;
+  font-size: 0.86rem;
+  font-weight: 750;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* Bottom block (labs / products), pinned to the bottom of the card */
+.xp-card__footer {
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+.xp-card__footer::before {
+  display: block;
+  width: 42%;
+  height: 0.55rem;
+  margin: 0 auto 1.25rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(8, 41, 67, 0.72), rgba(8, 41, 67, 0));
+  content: "";
+}
+
+.xp-card__section + .xp-card__section {
+  margin-top: 1.1rem;
+}
+
+.md-typeset .xp-card ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.md-typeset .xp-card li {
+  margin: 0.45rem 0;
+  padding-left: 0.12rem;
+  color: #fff;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.md-typeset .xp-card li::marker {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Product "chips" */
+.md-typeset .xp-card ul.xp-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.55rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.md-typeset .xp-card ul.xp-chips li {
+  margin: 0;
+  padding: 0.22rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 0.74rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.md-typeset .xp-card ul.xp-chips li span {
+  margin-left: 0.3em;
+  font-weight: 500;
+  opacity: 0.78;
+}
+
+/* Collapsible blocks (agenda / downloads) inside a card */
+.md-typeset .xp-card details {
+  margin: 0 0 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  font-size: 0.82rem;
+  overflow: hidden;
+}
+
+.md-typeset .xp-card details > summary {
+  position: relative;
+  padding: 0.6rem 2.2rem 0.6rem 0.9rem;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.md-typeset .xp-card details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Drop Material's admonition icon on our plain <details> */
+.md-typeset .xp-card details > summary::before {
+  display: none;
+}
+
+.md-typeset .xp-card details > summary::after {
+  position: absolute;
+  top: 50%;
+  right: 0.9rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  background: none;
+  -webkit-mask-image: none;
+          mask-image: none;
+  content: "";
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform 150ms ease;
+}
+
+.md-typeset .xp-card details[open] > summary::after {
+  transform: translateY(-30%) rotate(-135deg);
+}
+
+.md-typeset .xp-card details > ul,
+.md-typeset .xp-card details > table {
+  margin: 0 0.9rem 0.75rem;
+}
+
+.md-typeset .xp-card details > ul {
+  padding-left: 1.1rem;
+}
+
+.md-typeset .xp-card table {
+  display: table;
+  width: calc(100% - 1.8rem);
+  border-collapse: collapse;
+  background: transparent;
+  font-size: 0.78rem;
+}
+
+.md-typeset .xp-card table td {
+  padding: 0.35rem 0.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  vertical-align: top;
+}
+
+.md-typeset .xp-card table td:first-child {
+  width: 1%;
+  padding-right: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 78rem) {
+  .xp-cards,
+  .xp-cards:has(> .xp-card:nth-child(4):last-child) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 70rem;
+  }
+}
+
+@media (max-width: 42rem) {
+  .xp-cards,
+  .xp-cards:has(> .xp-card:nth-child(4):last-child) {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 38rem;
+    padding: 0.8rem;
+  }
+
+  .xp-card {
+    --card-hero-height: 12rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .xp-card {
+    transition: transform 180ms ease, box-shadow 180ms ease;
+  }
+
+  .xp-card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 1.35rem 3.25rem rgba(7, 22, 42, 0.24);
+  }
 }
