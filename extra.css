@@ -653,3 +653,224 @@ img.logo-dark {
     box-shadow: 0 1.35rem 3.25rem rgba(7, 22, 42, 0.24);
   }
 }
+
+/* ==========================================================================
+   One-screen workshop cards (opt-in: <section class="xp-cards xp-cards--fit">)
+   Goal: a track's landing page fits a desktop screen with no vertical scroll.
+   - long description -> collapsed <details class="xp-card__about">
+   - lab links        -> .xp-card__buttons > a.xp-card__button (pinned bottom)
+   - resources        -> .xp-strip, a full-width bar under the cards
+   Sizes scale with viewport HEIGHT: clamp(min, min(vw, vh), max).
+   ========================================================================== */
+.xp-cards--fit {
+  padding-top: clamp(0.6rem, 2vh, 2rem);
+  padding-bottom: clamp(0.6rem, 2vh, 2rem);
+  row-gap: clamp(0.75rem, 2vh, 1.5rem);
+}
+
+.xp-cards--fit .xp-card {
+  --card-hero-height: clamp(8rem, 25vh, 15rem);
+  --card-overlay-rise: clamp(3rem, 12vh, 6.5rem);
+}
+
+.xp-cards--fit .xp-card__hero {
+  padding: clamp(1rem, 3.5vh, 2.5rem) clamp(1.25rem, 2vw, 2.2rem) clamp(0.5rem, 1.5vh, 1.25rem);
+}
+
+.md-typeset .xp-cards--fit .xp-card__icon {
+  width: clamp(3rem, min(6vw, 9vh), 6.5rem);
+  height: clamp(3rem, min(6vw, 9vh), 6.5rem);
+  margin-bottom: clamp(0.5rem, 2vh, 1.25rem);
+}
+
+.xp-cards--fit .xp-card__body {
+  padding: clamp(0.5rem, 1.5vh, 1.25rem) clamp(1.25rem, 1.7vw, 2rem) clamp(1rem, 3vh, 2rem);
+}
+
+/* the About toggle already separates title from body */
+.xp-cards--fit .xp-card__divider {
+  display: none;
+}
+
+.xp-cards--fit .xp-card__footer {
+  padding-top: clamp(0.5rem, 1.5vh, 1.25rem);
+}
+
+.xp-cards--fit .xp-card__footer::before {
+  margin-bottom: clamp(0.5rem, 1.5vh, 1.25rem);
+}
+
+.xp-cards--fit .xp-card__section + .xp-card__section {
+  margin-top: clamp(0.6rem, 1.8vh, 1.1rem);
+}
+
+/* Compact product chips */
+.md-typeset .xp-cards--fit .xp-card ul.xp-chips {
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+}
+
+.md-typeset .xp-cards--fit .xp-card ul.xp-chips li {
+  padding: 0.12rem 0.55rem;
+  font-size: 0.68rem;
+}
+
+/* Collapsed workshop description */
+.md-typeset .xp-card details.xp-card__about > p {
+  margin: 0 0.9rem 0.75rem;
+}
+
+/* Lab buttons */
+.xp-card__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.md-typeset .xp-card a.xp-card__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: clamp(0.45rem, 1.2vh, 0.65rem) 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.md-typeset .xp-card a.xp-card__button::after {
+  flex: none;
+  content: "\2192";
+  font-weight: 700;
+}
+
+.md-typeset .xp-card a.xp-card__button:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.26);
+}
+
+/* Resources strip: spans the grid under the cards */
+.xp-strip {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1.25rem;
+  padding: 0.55rem clamp(1rem, 1.7vw, 1.5rem);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 1rem;
+  color: #fff;
+  background: linear-gradient(100deg, var(--track-start) 0%, var(--track-mid) 60%, var(--track-end) 100%);
+  box-shadow: 0 0.6rem 1.75rem rgba(7, 22, 42, 0.14);
+  font-size: 0.82rem;
+}
+
+.md-typeset .xp-strip h2 {
+  margin: 0;
+  color: inherit;
+  font-size: 0.86rem;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.md-typeset .xp-strip a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.55);
+  text-underline-offset: 0.18em;
+}
+
+.md-typeset .xp-strip a:hover {
+  text-decoration-color: #fff;
+}
+
+/* Strip dropdown: opens UPWARD as an overlay so it never makes the page scroll */
+.md-typeset .xp-strip details {
+  position: relative;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 0.6rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+  font-size: inherit;
+  overflow: visible;
+}
+
+.md-typeset .xp-strip details > summary {
+  position: relative;
+  padding: 0.35rem 2rem 0.35rem 0.8rem;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.md-typeset .xp-strip details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.md-typeset .xp-strip details > summary::before {
+  display: none;
+}
+
+.md-typeset .xp-strip details > summary::after {
+  position: absolute;
+  top: 50%;
+  right: 0.8rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  background: none;
+  -webkit-mask-image: none;
+          mask-image: none;
+  content: "";
+  transform: translateY(-30%) rotate(-135deg);
+  transition: transform 150ms ease;
+}
+
+.md-typeset .xp-strip details[open] > summary::after {
+  transform: translateY(-70%) rotate(45deg);
+}
+
+.md-typeset .xp-strip details > ul {
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 10;
+  width: max-content;
+  max-width: min(36rem, 90vw);
+  margin: 0;
+  padding: 0.75rem 1rem 0.75rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 0.75rem;
+  background: var(--track-start);
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.35);
+}
+
+.md-typeset .xp-strip details > ul li {
+  margin: 0.35rem 0;
+  color: #fff;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+/* Keep 3-4 columns down to small laptops (base rule drops to 2 at 78rem) */
+@media (max-width: 78rem) and (min-width: 55.01rem) {
+  .xp-cards--fit,
+  .xp-cards--fit:has(> .xp-card:nth-child(4):last-child) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: none;
+  }
+
+  .xp-cards--fit:has(> .xp-card:nth-child(4)) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
