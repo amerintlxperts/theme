@@ -938,3 +938,38 @@ img.logo-dark {
   font-weight: 700;
   white-space: nowrap;
 }
+
+/* Whole-card link + collapsible description: lift the body above the link
+   but let clicks fall through to it, except on the <details> toggle */
+.xp-card:has(> .xp-card__link) .xp-card__body {
+  z-index: 4;
+  pointer-events: none;
+}
+
+.xp-card:has(> .xp-card__link) .xp-card__body details {
+  pointer-events: auto;
+}
+
+/* Primary action in the resources strip, e.g. Getting Started */
+.md-typeset .xp-strip a.xp-strip__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 0.6rem;
+  background: rgba(255, 255, 255, 0.24);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.md-typeset .xp-strip a.xp-strip__button::after {
+  content: "\2192";
+}
+
+.md-typeset .xp-strip a.xp-strip__button:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.36);
+}
