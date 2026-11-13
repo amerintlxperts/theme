@@ -993,3 +993,14 @@ img.logo-dark {
   color: inherit;
   opacity: 0.7;
 }
+
+/* Same card height on every track page (SecOps cards have no lab buttons
+   and otherwise come out shorter, which reads as wider) */
+.xp-cards--fit .xp-card {
+  min-height: calc(4rem + 45vh);
+}
+
+/* Cleaner chips: drop the secondary suffix (e.g. a licence name) */
+.md-typeset .xp-cards--fit .xp-card ul.xp-chips li span {
+  display: none;
+}
