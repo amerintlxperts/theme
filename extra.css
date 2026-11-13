@@ -973,3 +973,23 @@ img.logo-dark {
   border-color: #fff;
   background: rgba(255, 255, 255, 0.36);
 }
+
+/* Fit cards, round 2 (no descriptions):
+   - no separator streak above the footer
+   - product chips in flipped contrast (solid white, track-coloured text)
+     so they read as labels, not as the translucent outlined lab buttons */
+.xp-cards--fit .xp-card__footer::before {
+  display: none;
+}
+
+.md-typeset .xp-cards--fit .xp-card ul.xp-chips li {
+  border-color: transparent;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--track-start);
+  font-weight: 700;
+}
+
+.md-typeset .xp-cards--fit .xp-card ul.xp-chips li span {
+  color: inherit;
+  opacity: 0.7;
+}
