@@ -862,6 +862,12 @@ img.logo-dark {
   line-height: 1.35;
 }
 
+/* 4 cards + a strip: the base "4th card is :last-child" rule misses, so
+   count cards directly */
+.xp-cards--fit:has(> .xp-card:nth-child(4)) {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 /* Keep 3-4 columns down to small laptops (base rule drops to 2 at 78rem) */
 @media (max-width: 78rem) and (min-width: 55.01rem) {
   .xp-cards--fit,
@@ -873,4 +879,62 @@ img.logo-dark {
   .xp-cards--fit:has(> .xp-card:nth-child(4)) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+}
+
+/* Whole card is one link (cards with a single destination): an empty anchor
+   stretched over the card, e.g. <a class="xp-card__link" href="…" aria-label="…"></a> */
+.xp-card:has(> .xp-card__link) {
+  cursor: pointer;
+}
+
+.md-typeset .xp-card a.xp-card__link {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: inherit;
+  text-decoration: none;
+}
+
+.md-typeset .xp-card a.xp-card__link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: -6px;
+}
+
+/* Strip dropdown holding a table (e.g. agenda): same upward overlay panel */
+.md-typeset .xp-strip details > table {
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 10;
+  display: table;
+  width: max-content;
+  max-width: min(36rem, 90vw);
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 0.75rem;
+  background: var(--track-start);
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.35);
+  font-size: 0.82rem;
+  overflow: hidden;
+}
+
+.md-typeset .xp-strip details > table td {
+  padding: 0.5rem 0.9rem;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  background: transparent;
+  vertical-align: top;
+}
+
+.md-typeset .xp-strip details > table tr:first-child td {
+  border-top: 0;
+}
+
+.md-typeset .xp-strip details > table td:first-child {
+  padding-right: 1.25rem;
+  font-weight: 700;
+  white-space: nowrap;
 }
